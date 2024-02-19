@@ -1,0 +1,201 @@
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  position: relative;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(17, 17, 17);
+  height: 100px;
+  color: rgb(240, 240, 240);
+  margin: 0;
+}
+
+header h1 {
+  background-color: rgb(29, 29, 29);
+  margin: 0;
+  text-align: center;
+}
+
+.login-form {
+  padding: 40px;
+}
+
+.username, .password {
+  padding: 10px 10px;
+  width: 200px;
+  font-size: 1rem;
+}
+
+.login-button {
+  background-color: rgb(0, 70, 0);
+  color: white;
+  margin-top: 20px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.add-todo-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.todo-name {
+  width: 300px;
+  margin: 20px 0;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid rgb(170, 170, 170);
+  border-radius: 4px;
+}
+
+.todo-date, .todo-time {
+  width: 120px;
+  margin-top: 20px;
+  margin-left: 6px;
+  padding: 8.5px 10px;
+  font-size: 1rem;
+  border: 1px solid rgb(170, 170, 170);
+  border-radius: 4px;
+}
+
+.add-todo-button {
+  background-color: rgb(0, 70, 0);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  width: 100px;
+  padding: 10px 20px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 200px;
+}
+
+.todo {
+  background-color: rgb(240, 240, 240);
+  margin: 8px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.existing-todo-name {
+  flex: 1;
+  width: 300px;
+  max-width: 300px;
+  padding: 10px;
+  white-space: nowrap; /* Prevents the text from wrapping to the next line */
+  overflow: hidden; /* Hides the overflowed content */
+  text-overflow: ellipsis;
+}
+
+.existing-todo-name:hover {
+  white-space: normal; /* Allows the text to wrap and be fully visible on hover */
+  overflow: visible; /* Displays the overflowed content on hover */
+  text-overflow: clip; /* No ellipsis on hover */
+}
+
+.existing-todo-date, .existing-todo-time {
+  width: 120px;
+  padding: 10px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.delete-button {
+  background-color: rgb(139, 0, 0);
+  color: whitesmoke;
+  width: 100px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  font-size: 1rem;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.confirm-delete-window {
+  display: none;
+  /* pointer-events: none; */
+  background-color: aliceblue;
+  position: absolute;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  left: 40%;
+  right: 40%;
+  top: 70%;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.show-confirm-delete-window {
+  display: block;
+}
+
+.darken-main {
+  opacity: 0.3;
+}
+
+.confirm-delete-window p {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin: 0;
+}
+
+.confirm-delete-window button {
+  padding: 10px;
+  width: 100px;
+  margin-top: 20px;
+  margin-left: 8px;
+  border: none;
+  color: wheat;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.confirm-delete-todo {
+  background-color: rgb(0, 116, 116);
+  cursor: pointer;
+}
+
+.cancel-delete-todo {
+  background-color: rgb(139, 0, 0);
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .todo-name {
+    display: block;
+  }
+
+  .todo {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .existing-todo-name {
+    text-align: center;
+  }
+  .todo-list {
+    margin: 40px 0;
+  }
+}
