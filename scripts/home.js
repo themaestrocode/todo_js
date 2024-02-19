@@ -28,12 +28,14 @@ addTodoButton.addEventListener("click", () => {
 function renderTodo(todo, index) {
    if (todo.time === "") todo.time = "- - : - -";
 
-   return `<div class="todo">
-				   <div class="existing-todo-name">${todo.name}</div>
-					<div class="existing-todo-date">${todo.date}</div>
-					<div class="existing-todo-time">${todo.time}</div>
-					<button class="delete-button js-delete-button" onclick="deleteTodo(${index});";>Delete</button>
-				</div>`;
+   return `
+      <div class="todo">
+			<div class="existing-todo-name">${todo.name}</div>
+			<div class="existing-todo-date">${todo.date}</div>
+			<div class="existing-todo-time">${todo.time}</div>
+			<button class="delete-button js-delete-button" onclick="deleteTodo(${index});";>Delete</button>
+		</div>
+   `;
 }
 
 function showTodoList() {
